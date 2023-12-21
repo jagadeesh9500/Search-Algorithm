@@ -19,13 +19,57 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
+Developed by:JAGADEESH P
+RegisterNumber: 23013534
+'''
+def linearSearch(array,n,k):
+    for i in range(0,n):
+        if(array[i]==k):
+            return i
+    return -1
+array = eval(input())
+k= eval(input())
+n=len(array)
+array.sort()
+print(array)
+result=linearSearch(array,n,k)
+if result !=-1:
+    print(f"Element found at index:  {result}")
+else:
+    print(f"Element not found")
+    
 
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+Developed by: JAGADEESH P
+RegisterNumber: 23013534
+'''
+def binarysearch(array, k, low, high):
+    while low<=high:
+        mid=(low+high)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+    
 
+
+
+array=eval(input())
+array.sort()
+k = eval(input())
+result=binarysearch(array,k,0,len(array)-1)
+print(array)
+if result!=-1:
+    print(f"Element found at index:  {result}")
+else:
+    print(f"Element not found")
 
 
 
@@ -33,13 +77,41 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+Developed by: your name:JAGADEESH P
+RegisterNumber: 23013534
+'''
+def binarysearch(array, k, low, high):
+    while low<=high:
+        mid=(low+high)
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+    
 
+
+
+array=eval(input())
+array.sort()
+k = eval(input())
+result=binarysearch(array,k,0,len(array)-1)
+print(array)
+if result!=-1:
+    print(f"Element found at index:  {result}")
+else:
+    print(f"Element not found")
 
 
 
 
 ```
 ## Sample Input and Output
+![image](https://github.com/jagadeesh9500/Search-Algorithm/assets/149087921/3676a109-63d8-415a-8cda-1973b6cf6147)
+![image](https://github.com/jagadeesh9500/Search-Algorithm/assets/149087921/81b82c16-fde7-4d38-8fb6-4f35acaab255)
+![image](https://github.com/jagadeesh9500/Search-Algorithm/assets/149087921/0c10085e-2277-4b58-8d8e-5610e8776646)
 
 
 
